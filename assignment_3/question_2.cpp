@@ -5,12 +5,11 @@ using namespace std;
 
 int main() {
     vector<int> arr = { 10, 20, 15, 30, 25 };
-    vector<int> prefixSum;
     int sum = 0;
     for (int i = 0; i < arr.size(); i++) {
         sum += arr[i];
-        prefixSum.push_back(sum);
+        arr[i] = sum;
     }
-    for (auto& item : prefixSum) cout << item << " ";
+    for (auto& item : arr) cout << item << " ";
     return 0;
 }
